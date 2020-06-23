@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm install --prefix client  && npm run build --prefix client && node index.js",
+    "build": "npm install --prefix client  && npm run build --prefix client && echo \"Build script over\"",
+    "start": "node index.js",
     "client-install": "npm install --prefix client",
     "server": "nodemon index.js",
     "client": "npm start --prefix client",
