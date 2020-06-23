@@ -12,23 +12,24 @@ app.use(cors());
 app.use("/api/todo", require("./routes/todo"));
 
 // Static files
-if (process.env.NODE_ENV === "production") {
+if (true || process.env.NODE_ENV === "production") {
   console.log("IN PRODUCTION");
   app.use(express.static(path.join(__dirname, "client/build")));
 
-  app.get("*", (req, res) => {
+  app.get("/*", (req, res) => {
     console.log("GET request");
-    res.sendFile(path.join(__dirname + "/client/build/index.html"));
+    res.sendFile(path.join(__dirname, "/client/build/index.html"));
   });
 } else {
+  console.log("IN DEVELOPMENT");
   app.use(express.static(path.join(__dirname, "client/public")));
-  app.get("*", (req, res) => {
+  app.get("/*", (req, res) => {
     console.log("[GET] Index");
     res.sendFile(path.join(__dirname + "/client/public/index.html"));
   });
 }
 
 const PORT = process.env.PORT | 5000;
-app.listen(PORT, "0.0.0.0", () => {
+app.listen(PORT, () => {
   console.log(`Server has started on ${PORT}`);
 });
