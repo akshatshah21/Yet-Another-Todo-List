@@ -5,7 +5,7 @@ function Todo(props) {
   const [done, toggle] = React.useState(props.done);
 
   let handleCheck = async (todo_id) => {
-    let res = await fetch("/todo", {
+    let res = await fetch("/api/todo", {
       method: "PUT",
       body: JSON.stringify({ todo_id }),
       headers: { "Content-Type": "application/json" },
@@ -19,7 +19,7 @@ function Todo(props) {
   };
 
   let handleDelete = async (todo_id) => {
-    let res = await fetch("/todo", {
+    let res = await fetch("/api/todo", {
       method: "DELETE",
       body: JSON.stringify({ todo_id }),
       headers: { "Content-Type": "application/json" },

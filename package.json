@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "postinstall": "NPM_CONFIG_PRODUCTION=false npm install --prefix client  && npm run build --prefix client",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client  && npm run build --prefix client",
     "client-install": "npm install --prefix client",
     "server": "nodemon index.js",
     "client": "npm start --prefix client",

@@ -11,7 +11,7 @@ function InputField(props) {
   let handleSubmit = async () => {
     if (content.trim() !== "") {
       try {
-        let res = await fetch("/todo", {
+        let res = await fetch("/api/todo", {
           method: "POST",
           body: JSON.stringify({ content }),
           headers: { "Content-Type": "application/json" },
