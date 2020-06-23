@@ -13,18 +13,18 @@ app.use(cors());
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "client/build")));
 
-  app.get("/", (req, res) => {
+  app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname + "/client/build/index.html"));
   });
 } else {
   app.use(express.static(path.join(__dirname, "client/public")));
-  app.get("/", (req, res) => {
+  app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname + "/client/public/index.html"));
   });
 }
 app.use("/todo", require("./routes/todo"));
 
 const PORT = process.env.PORT | 5000;
-app.listen(PORT, "0.0.0.0", () => {
-  console.log(`Server started on ${PORT}`);
+app.listen(PORT, () => {
+  console.log(`Server has started on ${PORT}`);
 });
