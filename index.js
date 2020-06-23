@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 
-// app.use("/api/todo", require("./routes/todo"));
+app.use("/api/todo", require("./routes/todo"));
 
 // Static files
 if (true || process.env.NODE_ENV === "production") {
