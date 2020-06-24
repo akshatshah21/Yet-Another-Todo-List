@@ -22,3 +22,9 @@ yarn-error.log*
 
 # Keys
 # keys.js
+
+
+# Editor stuff
+.vscode/
+*.swp
+*.swx

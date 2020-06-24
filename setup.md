@@ -30,13 +30,13 @@ npm run client-install
 	```
 	\c DBNAME
 	```
-	d. Create the tables by running the create_tables.sql file
+	d. Create the tables by running the [`create_tables.sql`](create_tables.sql) file
 	```bash
 	\i <ABSOLUTE_PATH_TO_DIR>/db/create_tables.sql
 	```
 	e. Check if a table "todo" has been created in a database by running `\d DBNAME`
 
-7. Modify the contents of `keys.js` to match your user credentials for the PostgreSQL database
+7. Modify the contents of [`keys.js`](keys.js) to match your user credentials for the PostgreSQL database
 8. Run the application
 ```bash
 npm run dev

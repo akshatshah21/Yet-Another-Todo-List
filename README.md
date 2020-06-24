@@ -10,11 +10,11 @@ Yes, this is a simple web-based todo app, built using the PERN stack.
 * [__TimeAgo-React__](https://github.com/hustcc/timeago-react) for the "x minutes ago" feature
 
 ### Set up
-To install and set up this application on your computer locally, follow the steps at [setup.md]().
+To install and set up this application on your computer locally, follow the steps at [setup.md](setup.md).
 
 
 ### Deployment
-The app is deployed to [Heroku](https://yet-another-todo-list.herokuapp.com). 
+The app is deployed to Heroku. You can view it at https://yet-another-todo-list.herokuapp.com. 
 
 ### Future Work
-See [todo.md]().
+See [_todo.md_](todo.md). Not kidding, try that link.
