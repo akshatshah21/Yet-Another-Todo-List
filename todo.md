@@ -1,5 +1,6 @@
 # Todo! (Haha)
 
+- [x] Deploy to Heroku
 - [ ] Add more info for a todo: note, deadline. Maybe in a modal, with a date and time picker
 - [ ] A header
 - [ ] A footer
